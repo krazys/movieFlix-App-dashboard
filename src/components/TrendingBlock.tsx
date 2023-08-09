@@ -3,7 +3,7 @@ import { img_300 } from "../config/config.js";
 import "../../styles/movieBlock.scss";
 import Carousel, { CarouselItem } from "./carousel.jsx";
 import ModalInfoView from "./ModalInfoView";
-import { movieDetails } from "./ApiCallService";
+// import { movieDetails } from "./ApiCallService";
 import axios from "axios";
 
 interface fetchedDataResponse {

@@ -28,11 +28,11 @@ interface genreResponse {
   name: string;
   toggle?: boolean;
 }
-interface genreResponseModify {
-  id: number;
-  name: string;
-  toggle: boolean;
-}
+// interface genreResponseModify {
+//   id: number;
+//   name: string;
+//   toggle: boolean;
+// }
 
 type MovieProps = {
   movie: string;

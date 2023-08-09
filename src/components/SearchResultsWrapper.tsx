@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Header from "./Header";
 import "../../styles/searchResultsWrapper.scss";
 import { img_300 } from "../config/config";
@@ -117,7 +117,7 @@ const SearchResultsWrapper = () => {
     setModalInfoData(searchResponse[index]);
     setModalOpen(!modalopen);
     // console.log("NUM",index, indexInner);
-    let value = movieDetails(searchResponse[index]);
+    // let value = movieDetails(searchResponse[index]);
     //    setModalInfoData(value)
   };
   const closemoreInfoModal = () => {

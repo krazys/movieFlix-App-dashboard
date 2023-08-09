@@ -46,13 +46,13 @@ type ContentListProps = {
   movieList: Array<movieRepsonse>;
   movie?: string;
   tv?: string;
-  trending?: string;
+  // trending?: string;
 };
 const ContentList: React.FC<ContentListProps> = ({
   movieList,
   movie,
   tv,
-  trending,
+  // trending,
 }) => {
   // const capitalizeFirstLetter = (str: string) => {
   //     let x = str.charAt(0).toUpperCase() + str.slice(1);

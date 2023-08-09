@@ -64,11 +64,11 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
   let [videoSource, setVideoSource] = useState<string>("");
   const [windowWidth, setWindowWidth] = useState<number>(830);
   const [windowHeight, setWindowHeight] = useState<number>(830);
-  const capitalizeFirstLetter = (str: string) => {
-    let x = str.charAt(0).toUpperCase() + str.slice(1);
-    console.log(x);
-    return x;
-  };
+  // const capitalizeFirstLetter = (str: string) => {
+  //   let x = str.charAt(0).toUpperCase() + str.slice(1);
+  //   console.log(x);
+  //   return x;
+  // };
 
   // const onPlayerReady: YouTubeProps['onReady'] = (event) => {
   //     // access to player in all event handlers via event.target
@@ -83,6 +83,7 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
   //         autoplay: 1,
   //     },
   // };
+  console.log(windowWidth, windowHeight);
 
   window.addEventListener("resize", function () {
     if (this.window.innerWidth < 720) {
@@ -96,7 +97,7 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
 
   const videoFetch = () => {
     if (modalDetailedInfo != undefined && modalDetailedInfo.videos) {
-      let xv = modalDetailedInfo.videos.result;
+      // let xv = modalDetailedInfo.videos.result;
       // modalDetailedInfo.videos.results.map((ele: any) => {
       //     if (ele.type === 'Trailer') {
       //         setVideoSource(ele.key)
