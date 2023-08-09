@@ -117,7 +117,7 @@ const MoviePage: React.FC<MovieProps> = ({ movie }) => {
       console.log("response", response?.data?.genres);
 
       let responseArr = response?.data?.genres;
-      let newArr = responseArr.map((ele: any, index: number) => {
+      let newArr = responseArr.map((ele: any) => {
         return { ...ele, toggle: false };
       });
       setGenreList(newArr);

@@ -27,7 +27,7 @@ type TrendingProps = {
   trending: string;
 };
 
-const TrendingPage: React.FC<TrendingProps> = ({ trending }) => {
+const TrendingPage: React.FC<TrendingProps> = () => {
   let [movieList, setMovieList] = useState<Array<movieRepsonse>>([]);
   // let [filterNameSelected, setFilterNameSelected] = useState<string>('now_playing');
   let [page, setPage] = useState<number>(1);

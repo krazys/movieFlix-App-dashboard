@@ -117,7 +117,7 @@ const SearchResultsWrapper = () => {
     setModalInfoData(searchResponse[index]);
     setModalOpen(!modalopen);
     // console.log("NUM",index, indexInner);
-    // let value = movieDetails(searchResponse[index]);
+    movieDetails(searchResponse[index]);
     //    setModalInfoData(value)
   };
   const closemoreInfoModal = () => {
