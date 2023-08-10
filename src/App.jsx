@@ -12,6 +12,7 @@ import TrendingPage from "./components/TrendingPage";
 const SearchResultsWrapper = lazy(() =>
   import("./components/SearchResultsWrapper")
 );
+import SignupPage from "./components/SignupPage";
 // import NotFound from './components/NotFound';
 
 const App = () => {
@@ -34,6 +35,7 @@ const App = () => {
               element={<TrendingPage trending="trending" />}
             />
             <Route path="/search/:data" element={<SearchResultsWrapper />} />
+            <Route path="/signup" element={<SignupPage />} />
             {/* <Route element={<NotFound/>} /> */}
           </Routes>
         </Suspense>

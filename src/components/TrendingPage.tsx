@@ -36,9 +36,8 @@ const TrendingPage: React.FC<TrendingProps> = () => {
   let [newArr, setNewArr] = useState<Array<number>>([]);
   // let [genreUrl, setGenreUrl] = useState<string>('');
 
-  let numberArr: any = [];
-
   const generateNum = (a: number, b: number) => {
+    let numberArr: any = [];
     for (let i = a; i < b; i++) {
       numberArr.push(i);
       console.log(a, b, i, "genearted2");
@@ -46,7 +45,7 @@ const TrendingPage: React.FC<TrendingProps> = () => {
 
     setNewArr(numberArr);
   };
-  console.log(numberArr);
+
   const pageClick = (ele: any) => {
     let num = Number(ele.target.textContent);
     setPage(num);

@@ -35,9 +35,8 @@ const ShowPage: React.FC<ShowProps> = ({ tv }) => {
   let [newArr, setNewArr] = useState<Array<number>>([]);
   // let [genreUrl, setGenreUrl] = useState<string>('');
 
-  let numberArr: any = [];
-
   const generateNum = (a: number, b: number) => {
+    let numberArr: any = [];
     for (let i = a; i < b; i++) {
       numberArr.push(i);
       console.log(a, b, i, "genearted2");
@@ -45,7 +44,7 @@ const ShowPage: React.FC<ShowProps> = ({ tv }) => {
 
     setNewArr(numberArr);
   };
-  console.log(numberArr);
+
   const pageClick = (ele: any) => {
     let num = Number(ele.target.textContent);
     setPage(num);
