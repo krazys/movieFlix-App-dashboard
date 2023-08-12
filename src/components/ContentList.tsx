@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { img_300 } from "../config/config";
+import { useEffect, useState } from "react";
+import { img_300 } from "../config/config.js";
 import "../../styles/contentList.scss";
 import ModalInfoView from "./ModalInfoView";
 import axios from "axios";

@@ -4,6 +4,9 @@ import "../../styles/modalInfoView.scss";
 // import YouTube, { YouTubeProps } from 'react-youtube';
 import YoutubeEmbed from "./YoutubeEmbed";
 import { img_300 } from "../config/config";
+import { AiOutlineHeart, AiOutlineStar } from "react-icons/ai";
+import { BsBookmark } from "react-icons/bs";
+import { Tooltip } from "react-tooltip";
 
 interface fetchedDataResponse {
   title: string;
@@ -128,33 +131,9 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
   console.log(videoUrl, "videoUrl");
   console.log(videoSource, "videoSource");
 
-  //     const isMovie = movie !== undefined;
-  // const isTV = tv !== undefined;
-  // const isTVMediaType = modalInfoData.media_type === 'tv';
-
-  // let runTimeContent = null;
-
-  // if (isMovie) {
-  //   const runtimeHours = modalDetailedInfo !== undefined
-  //     ? Math.ceil((modalDetailedInfo.runtime) / 60 * 10) / 10
-  //     : null;
-  //     runTimeContent = <li><span>RunTime:</span>&nbsp;{runtimeHours}Hrs</li>;
-  // } else if (isTV || isTVMediaType) {
-  //     runTimeContent = (
-  //     <>
-  //       <li><span>Number of seasons:</span>&nbsp;{modalDetailedInfo?.number_of_seasons}</li>
-  //       <li><span>Number of episodes:</span>&nbsp;{modalDetailedInfo?.number_of_episodes}</li>
-  //     </>
-  //   );
-  // }
-
-  // // Render the content
-  // {runTimeContent}
-
   return (
     <div className="modalOuterWrapper" onClick={closemoreInfoModal}>
       <div className="innerContainer" onClick={(e) => e.stopPropagation()}>
-        {/* <span className="close" >&times;</span> */}
         <div className="videoSection">
           {videoSource !== "" ? (
             <YoutubeEmbed embedId={videoSource} />
@@ -165,6 +144,36 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
         {modalInfoData.media_type !== "person" ? (
           <div className="movieInfoSection">
             <div className="leftSection">
+              <div className="ratingSection">
+                {/* <a id="not-clickable">◕‿‿◕</a> */}
+                <a id="not-clickable">
+                  {" "}
+                  <span>
+                    <AiOutlineHeart />
+                  </span>
+                </a>
+                <Tooltip className="tooltext" anchorSelect="#not-clickable">
+                  Login to add this media to your favorite list
+                </Tooltip>
+                <a id="not-clickable-1">
+                  {" "}
+                  <span>
+                    <AiOutlineStar />
+                  </span>
+                </a>
+                <Tooltip className="tooltext" anchorSelect="#not-clickable-1">
+                  Login to rate this media
+                </Tooltip>
+                <a id="not-clickable-2">
+                  {" "}
+                  <span>
+                    <BsBookmark />
+                  </span>
+                </a>
+                <Tooltip className="tooltext" anchorSelect="#not-clickable-2">
+                  Login to add this media to your watchlist
+                </Tooltip>
+              </div>
               <h3>
                 {/* {(modalInfoData.media_type === 'tv') ? capitalizeFirstLetter(modalInfoData.name) : capitalizeFirstLetter(modalInfoData.title)} */}
                 {/* {(modalInfoData.media_type === 'tv') ? modalInfoData.name : modalInfoData.title}
