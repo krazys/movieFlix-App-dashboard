@@ -2,8 +2,8 @@ import { useState } from "react";
 import "../../styles/Header.scss";
 import { FcSearch } from "react-icons/fc";
 import SearchWrapper from "./SearchWrapper";
-import { SiThemoviedatabase } from "react-icons/si";
 import { Link } from "react-router-dom";
+import MovieFlixLogo from "./MovieFlixLogo.png";
 
 const Header = () => {
   const [isNavExpanded, setIsNavExpanded] = useState<boolean>(false);
@@ -28,7 +28,7 @@ const Header = () => {
         <nav className="navigation">
           <div className="logo">
             <a href="/">
-              <SiThemoviedatabase />
+              <img src={MovieFlixLogo} alt="MovieFlix" />
             </a>
           </div>
           <div className="leftSection">

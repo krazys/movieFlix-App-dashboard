@@ -1,11 +1,10 @@
 import { useState } from "react";
 import "../../../styles/Header.scss";
 import { FcSearch } from "react-icons/fc";
-// import SearchWrapper from "./SearchWrapper";
-import { SiThemoviedatabase } from "react-icons/si";
 import { Link, useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
+import MovieFlixLogo from "../MovieFlixLogo.png";
 
 const DashBoardHeader = () => {
   const [isNavExpanded, setIsNavExpanded] = useState<boolean>(false);
@@ -37,7 +36,7 @@ const DashBoardHeader = () => {
         <nav className="navigation">
           <div className="logo">
             <a href="/">
-              <SiThemoviedatabase />
+              <img src={MovieFlixLogo} alt="MovieFlix" />
             </a>
           </div>
           <div className="leftSection">

@@ -20,6 +20,12 @@
       padding: 8px 0;
       a {
         font-size: 50px;
+        img {
+          width: 166px;
+          @include respond(mobile) {
+            width: 136px;
+          }
+        }
       }
     }
     .leftSection {

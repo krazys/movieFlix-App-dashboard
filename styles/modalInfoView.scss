@@ -75,6 +75,9 @@
           .tooltext {
             font-size: 14px;
             color: #fff;
+            @include respond(mobile) {
+              font-size: 12px;
+            }
           }
         }
 
