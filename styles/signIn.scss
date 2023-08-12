@@ -1,0 +1,125 @@
+@import "./variables.scss";
+
+.signInOuterContainer {
+  background-image: url("../src/components/bannerImage.jpg");
+  background-size: cover;
+  min-height: 43.75rem;
+  height: 100%;
+  @include respond(mobile) {
+    min-height: 30rem;
+  }
+
+  .signInInnerContainer {
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    @include flex-center;
+    flex-direction: column;
+    min-height: 43.75rem;
+    @include respond(mobile) {
+      min-height: 30rem;
+    }
+    .signInContainer {
+      background-color: rgba(0, 0, 0, 0.75);
+      border-radius: 4px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      min-width: 380px;
+      @include respond(mobile) {
+        min-width: 220px;
+      }
+      .headerSection {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 18px 0;
+
+        flex-direction: column;
+        h3 {
+          margin-block-end: unset;
+          margin-block-start: unset;
+          color: #e8e8e8;
+          font-size: 24px;
+          font-family: $primary-font;
+        }
+        p {
+          font-size: 16px;
+          color: #e8e8e8;
+          font-family: $secondary-font;
+        }
+      }
+      .formSection {
+        @include flex-center;
+
+        flex-direction: column;
+        p {
+          color: #e50914;
+          font-size: 14px;
+        }
+        form {
+          gap: 4px;
+          display: flex;
+          flex-direction: column;
+          min-width: 268px;
+          @include respond(mobile) {
+            min-width: 228px;
+          }
+          label {
+            color: #e8e8e8;
+            padding-top: 14px;
+            font-size: 14px;
+            font-family: $secondary-font;
+          }
+          input {
+            border: 1px solid transparent;
+            border-radius: 4px;
+            min-height: 16px;
+            min-width: 16px;
+            font-weight: 400;
+            padding: 14px 12px;
+            &:focus {
+              border: 1px solid #21243d;
+            }
+          }
+        }
+        button {
+          border-radius: 4px;
+          font-size: 22px;
+          font-weight: 400;
+          padding: 4px;
+          background-color: #e50914;
+          color: #fff;
+          margin-top: 15px;
+          cursor: pointer;
+          border: none;
+        }
+      }
+      .forgotPassword {
+        margin: 12px 0;
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        p {
+          margin-block-end: unset;
+          margin-block-start: unset;
+          font-size: 14px;
+          color: #e8e8e8;
+          font-family: $secondary-font;
+        }
+        button {
+          border: none;
+          background-color: transparent;
+          cursor: pointer;
+          text-decoration: underline;
+          color: rgb(190, 190, 252);
+          font-size: 18px;
+          margin-top: unset;
+        }
+      }
+    }
+  }
+}

@@ -19,15 +19,25 @@
         color: #21243d;
         font-size: 24px;
         font-family: $primary-font;
+        margin-bottom: 12px;
       }
       p {
         font-size: 16px;
         color: #21243d;
         font-family: $secondary-font;
+        margin-block-start: unset;
+        margin-block-end: unset;
+        line-height: 1.6em;
       }
     }
     .formSection {
       @include flex-center;
+
+      flex-direction: column;
+      p {
+        color: #e50914;
+        font-size: 14px;
+      }
       form {
         gap: 4px;
         display: flex;
@@ -53,14 +63,34 @@
           }
         }
       }
-      .submit {
+      button {
         border-radius: 4px;
-        font-size: 24px;
+        font-size: 22px;
         font-weight: 400;
         padding: 4px;
         background-color: #e50914;
         color: #fff;
         margin-top: 15px;
+        cursor: pointer;
+        border: none;
+      }
+    }
+    .forgotPassword {
+      margin: 12px 0;
+      display: flex;
+      gap: 12px;
+      p {
+        margin-block-end: unset;
+        margin-block-start: unset;
+        font-size: 14px;
+        color: #21243d;
+      }
+      button {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        text-decoration: underline;
+        color: rgb(43, 43, 246);
       }
     }
   }

@@ -1,11 +1,13 @@
 import { useState } from "react";
-import "../../styles/Header.scss";
+import "../../../styles/Header.scss";
 import { FcSearch } from "react-icons/fc";
-import SearchWrapper from "./SearchWrapper";
+// import SearchWrapper from "./SearchWrapper";
 import { SiThemoviedatabase } from "react-icons/si";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
+import { auth } from "../../config/firebase";
 
-const Header = () => {
+const DashBoardHeader = () => {
   const [isNavExpanded, setIsNavExpanded] = useState<boolean>(false);
   const [isSearchOpen, setIsSearchOpen] = useState<boolean>(false);
 
@@ -17,10 +19,17 @@ const Header = () => {
     setIsSearchOpen(!isSearchOpen);
   };
 
-  // const redirectToSignup = () => {
-  //   setIsSignupOpen(!isSignupOpen);
-  //   navigate("/auth");
-  // };
+  const navigate = useNavigate();
+  const handleLogout = () => {
+    signOut(auth)
+      .then(() => {
+        console.log("Sign-out successful.");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <>
@@ -54,13 +63,13 @@ const Header = () => {
             <div className={`nav-menu ${isNavExpanded ? "expanded" : ""}`}>
               <ul className="buttonWrapper">
                 <li>
-                  <Link to="/signup">
-                    <button className="signIn">Sign In</button>
-                  </Link>
+                  <button className="logout" onClick={handleLogout}>
+                    Logout
+                  </button>
                 </li>
                 <Link to="/login">
                   <li>
-                    <button className="login">Login</button>
+                    <button className="login">Profile</button>
                   </li>
                 </Link>
               </ul>
@@ -68,10 +77,10 @@ const Header = () => {
           </div>
         </nav>
 
-        {isSearchOpen && <SearchWrapper />}
+        {/* {isSearchOpen && <SearchWrapper />} */}
       </div>
     </>
   );
 };
 
-export default Header;
+export default DashBoardHeader;
