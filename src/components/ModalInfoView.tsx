@@ -67,6 +67,8 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
   let [videoSource, setVideoSource] = useState<string>("");
   const [windowWidth, setWindowWidth] = useState<number>(830);
   const [windowHeight, setWindowHeight] = useState<number>(830);
+  console.log(windowWidth);
+  console.log(windowHeight);
   // const capitalizeFirstLetter = (str: string) => {
   //   let x = str.charAt(0).toUpperCase() + str.slice(1);
   //   console.log(x);
