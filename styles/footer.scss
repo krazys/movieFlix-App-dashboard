@@ -1,0 +1,24 @@
+@import "./variables.scss";
+
+.footerContainer {
+  background-color: rgba(0, 0, 0, 0.75);
+  min-height: 38px;
+  @include flex-center;
+  p {
+    text-align: center;
+    color: aliceblue;
+    margin-block-start: unset;
+    margin-block-end: unset;
+    font-size: 12px;
+    font-family: $secondary-font;
+    letter-spacing: 1px;
+    @include respond(mobile) {
+      font-size: 10px;
+      line-height: 1.6em;
+    }
+  }
+
+  img {
+    height: 16px;
+  }
+}

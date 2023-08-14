@@ -4,6 +4,7 @@ import HeroBanner from "./HeroBanner";
 import TrendingSection from "./TrendingSection";
 import TrendingMovies from "./TrendingMovies";
 import TrendingShows from "./TrendingShows";
+import Footer from "./Footer.tsx";
 
 import "../../styles/homePageWrapper.scss";
 
@@ -18,6 +19,7 @@ const HomePageWrappper = () => {
         <TrendingMovies />
         <hr className="divider" />
         <TrendingShows />
+        <Footer />
       </div>
     </div>
   );
