@@ -1,0 +1,46 @@
+@import "../variables.scss";
+
+.readMeContainer {
+  background-color: azure;
+  padding: 12px 18px;
+
+  h1 {
+    font-size: 28px;
+    font-family: $primary-font;
+    color: $font-color-dark;
+    text-align: center;
+    @include respond(mobile) {
+      font-size: 22px;
+    }
+  }
+
+  h2 {
+    font-size: 22px;
+    font-family: $primary-font;
+    color: $font-color-dark;
+    text-align: center;
+  }
+
+  p {
+    font-size: 18px;
+    font-family: $secondary-font;
+    color: $font-color-dark;
+    text-align: center;
+    line-height: 1.3em;
+  }
+  span {
+    color: black;
+    font-weight: 600;
+  }
+
+  .listSection {
+    ul {
+      @include respond(mobile) {
+        padding-inline-start: unset;
+      }
+      li {
+        line-height: 1.7em;
+      }
+    }
+  }
+}

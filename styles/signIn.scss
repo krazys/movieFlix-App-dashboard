@@ -30,7 +30,7 @@
       flex-direction: column;
       min-width: 380px;
       @include respond(mobile) {
-        min-width: 220px;
+        min-width: 260px;
       }
       .headerSection {
         display: flex;
@@ -45,11 +45,17 @@
           color: #e8e8e8;
           font-size: 24px;
           font-family: $primary-font;
+          @include respond(mobile) {
+            font-size: 20px;
+          }
         }
         p {
           font-size: 16px;
           color: #e8e8e8;
           font-family: $secondary-font;
+          @include respond(mobile) {
+            font-size: 14px;
+          }
         }
       }
       .formSection {

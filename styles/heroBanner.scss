@@ -1,52 +1,94 @@
-@import './variables.scss';
-.OuterContainer{
-    background-image: url('../src/components/bannerImage.jpg');
-    background-size: cover;
+@import "./variables.scss";
+.OuterContainer {
+  background-image: url("../src/components/bannerImage.jpg");
+  background-size: cover;
+  min-height: 43.75rem;
+  height: 100%;
+  @include respond(mobile) {
+    min-height: 30rem;
+  }
+
+  .backgroundOpacity {
+    background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    );
+    gap: 20px;
+    @include flex-center;
+    flex-direction: column;
     min-height: 43.75rem;
-    height: 100%;
-    @include respond(mobile){
-        min-height: 30rem;
-    
+    @include respond(mobile) {
+      min-height: 30rem;
     }
-
-    .backgroundOpacity{
-        background-image: linear-gradient(
-            to top, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);    
-            @include flex-center;
-            flex-direction: column;
-            min-height: 43.75rem;
-            @include respond(mobile){
-                min-height: 30rem;
-            
-            }
-    .centraltextSec{
-
-        @include flex-between;
-        flex-direction: column;
-        h1{
-            margin: unset;
-            color: $primary-bg-color;
-            font-weight: 900;
-            font-size: 1.8rem;
-            font-family: $primary-font;
-            @include respond(mobile){
-                font-size: 0.9rem;
-            }
+    .centraltextSec {
+      @include flex-between;
+      flex-direction: column;
+      h1 {
+        margin: unset;
+        color: $primary-bg-color;
+        font-weight: 900;
+        font-size: 1.8rem;
+        font-family: $primary-font;
+        @include respond(mobile) {
+          font-size: 0.7rem;
         }
-        p{
-            font-size: 1.2rem;
-            color: $primary-bg-color;
-            font-weight: 600;
-            font-family: $secondary-font;
-            @include respond(mobile){
-                font-size: 0.6rem;
-            }
-        }
-    }
-    .scrollDown{
-        font-size: 34px;
-        color: azure;
+      }
+      p {
+        font-size: 1.2rem;
+        color: $primary-bg-color;
         font-weight: 600;
+        font-family: $secondary-font;
+        @include respond(mobile) {
+          font-size: 0.6rem;
+        }
+      }
     }
-}
+    .scrollDown {
+      font-size: 34px;
+      color: azure;
+      font-weight: 600;
+      .mouse {
+        width: 46px;
+        height: 86px;
+        border: 3px solid #928f8f;
+        border-radius: 60px;
+        position: relative;
+        &::before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 10px;
+          left: 50%;
+          transform: translateX(-50%);
+          background-color: #c1c0c0;
+          border-radius: 50%;
+          opacity: 1;
+          animation: wheel 2s infinite;
+          -webkit-animation: wheel 2s infinite;
+        }
+
+        @include respond(mobile) {
+          width: 36px;
+          height: 76px;
+        }
+      }
+
+      @keyframes wheel {
+        to {
+          opacity: 0;
+          top: 60px;
+        }
+      }
+
+      @-webkit-keyframes wheel {
+        to {
+          opacity: 0;
+          top: 60px;
+        }
+      }
+    }
+  }
 }

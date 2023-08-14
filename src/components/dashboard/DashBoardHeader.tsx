@@ -66,11 +66,11 @@ const DashBoardHeader = () => {
                     Logout
                   </button>
                 </li>
-                <Link to="/login">
+                {/* <Link to="/login">
                   <li>
                     <button className="login">Profile</button>
                   </li>
-                </Link>
+                </Link> */}
               </ul>
             </div>
           </div>

@@ -6,6 +6,9 @@
     min-height: 110vh;
     @include flex-center;
     flex-direction: column;
+    @include respond(mobile) {
+      padding: 0 12px;
+    }
     .headerSection {
       display: flex;
       align-items: center;
@@ -28,6 +31,10 @@
         margin-block-start: unset;
         margin-block-end: unset;
         line-height: 1.6em;
+        @include respond(mobile) {
+          text-align: center;
+          padding-bottom: 12px;
+        }
       }
     }
     .formSection {

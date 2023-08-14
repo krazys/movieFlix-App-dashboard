@@ -1,6 +1,4 @@
-// import react from 'react';
 import "../../styles/heroBanner.scss";
-import { CgScrollV } from "react-icons/cg";
 
 const HeroBanner = () => {
   return (
@@ -13,7 +11,7 @@ const HeroBanner = () => {
 
         <div className="signup"></div>
         <div className="scrollDown">
-          <CgScrollV />
+          <div className="mouse"></div>
         </div>
       </div>
     </div>
