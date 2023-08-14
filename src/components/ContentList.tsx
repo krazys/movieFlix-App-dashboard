@@ -69,7 +69,7 @@ const ContentList: React.FC<ContentListProps> = ({
 
   const movieDetails = async (modalInfoData: any) => {
     try {
-      console.log(modalInfoData.id, modalInfoData.media_type);
+      // console.log(modalInfoData.id, modalInfoData.media_type);
       let media_type =
         modalInfoData.media_type !== undefined
           ? modalInfoData.media_type
@@ -79,15 +79,15 @@ const ContentList: React.FC<ContentListProps> = ({
       let response = await axios.get(
         `https://api.themoviedb.org/3/${media_type}/${modalInfoData.id}?api_key=3e85d84a2d3e58168179cf80ecdecea5&append_to_response=videos`
       );
-      console.log("deatiled", response);
+      // console.log("deatiled", response);
       setModalDetailedInfo(response?.data);
       let watchProviderList = await axios.get(
         `https://api.themoviedb.org/3/${media_type}/${modalInfoData.id}/watch/providers?api_key=3e85d84a2d3e58168179cf80ecdecea5`
       );
       setWatchProvidersData(watchProviderList?.data?.results["US"]);
-      console.log(watchProviderList, modalInfoData.id, "watchProviderList");
+      // console.log(watchProviderList, modalInfoData.id, "watchProviderList");
     } catch (error) {
-      console.log("deatiled", modalInfoData);
+      // console.log("deatiled", modalInfoData);
       console.log(error);
     }
   };
@@ -99,7 +99,7 @@ const ContentList: React.FC<ContentListProps> = ({
   };
   const closemoreInfoModal = () => {
     setModalOpen(!modalopen);
-    console.log("Callback function executed!");
+    // console.log("Callback function executed!");
   };
 
   useEffect(() => {

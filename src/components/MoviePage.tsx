@@ -65,7 +65,7 @@ const MoviePage: React.FC<MovieProps> = ({ movie }) => {
     let num = Number(ele.target.textContent);
     setPage(num);
   };
-  console.log(page, "page");
+  // console.log(page, "page");
 
   const initialNumGenerator = () => {
     setlastNum(lastNum + 10);
@@ -83,15 +83,15 @@ const MoviePage: React.FC<MovieProps> = ({ movie }) => {
     setPage(lastNum - 11);
   };
 
-  console.log(startNum, "startNum");
-  console.log(lastNum, "lastNum");
+  // console.log(startNum, "startNum");
+  // console.log(lastNum, "lastNum");
 
   const movieListFetch = async () => {
     try {
       let response = await axios.get(
         `https://api.themoviedb.org/3/discover/movie?api_key=3e85d84a2d3e58168179cf80ecdecea5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreUrlId}`
       );
-      console.log(response);
+      // console.log(response);
 
       setMovieList(response?.data.results);
     } catch (error) {
@@ -114,7 +114,7 @@ const MoviePage: React.FC<MovieProps> = ({ movie }) => {
       let response = await axios.get(
         `https://api.themoviedb.org/3/genre/movie/list?api_key=3e85d84a2d3e58168179cf80ecdecea5`
       );
-      console.log("response", response?.data?.genres);
+      // console.log("response", response?.data?.genres);
 
       let responseArr = response?.data?.genres;
       let newArr = responseArr.map((ele: any) => {
@@ -145,7 +145,7 @@ const MoviePage: React.FC<MovieProps> = ({ movie }) => {
         return ele;
       }
     });
-    console.log(updatedgenreListModify, "updatedgenreListModify");
+    // console.log(updatedgenreListModify, "updatedgenreListModify");
     setGenreList(updatedgenreListModify);
 
     // setTimeout(()=>{
@@ -168,12 +168,12 @@ const MoviePage: React.FC<MovieProps> = ({ movie }) => {
     if (stringGenreIdArr.length < 1) setGenreUrlId("");
     else setGenreUrlId(stringGenreIdArr.join(","));
   };
-  console.log();
+  // console.log();
 
   // let indexSelectedArray=[];
   useEffect(() => {
     stringGenreIdArr = filteredGenreId();
-    console.log(stringGenreIdArr, "stringGenreIdArr");
+    // console.log(stringGenreIdArr, "stringGenreIdArr");
 
     stringGenreId(stringGenreIdArr);
 

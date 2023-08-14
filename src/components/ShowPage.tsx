@@ -39,7 +39,7 @@ const ShowPage: React.FC<ShowProps> = ({ tv }) => {
     let numberArr: any = [];
     for (let i = a; i < b; i++) {
       numberArr.push(i);
-      console.log(a, b, i, "genearted2");
+      // console.log(a, b, i, "genearted2");
     }
 
     setNewArr(numberArr);
@@ -49,7 +49,7 @@ const ShowPage: React.FC<ShowProps> = ({ tv }) => {
     let num = Number(ele.target.textContent);
     setPage(num);
   };
-  console.log(page, "page");
+  // console.log(page, "page");
 
   const initialNumGenerator = () => {
     setlastNum(lastNum + 10);
@@ -67,8 +67,8 @@ const ShowPage: React.FC<ShowProps> = ({ tv }) => {
     setPage(lastNum - 11);
   };
 
-  console.log(startNum, "startNum");
-  console.log(lastNum, "lastNum");
+  // console.log(startNum, "startNum");
+  // console.log(lastNum, "lastNum");
 
   const movieListFetch = async () => {
     try {
@@ -77,7 +77,7 @@ const ShowPage: React.FC<ShowProps> = ({ tv }) => {
       );
 
       // let response = await axios.get(`https://api.themoviedb.org/3/discover/tv?api_key=3e85d84a2d3e58168179cf80ecdecea5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}&with_genres=${genreUrl}`)
-      console.log(response);
+      // console.log(response);
 
       setMovieList(response?.data.results);
     } catch (error) {

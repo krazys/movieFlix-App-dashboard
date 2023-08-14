@@ -13,7 +13,7 @@ const DashboardHome = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         const uid = user.uid;
-        console.log("uid", uid);
+        // console.log("uid", uid);
       } else {
         navigate("/login");
 
@@ -25,6 +25,9 @@ const DashboardHome = () => {
     <>
       <div className="dashboardOuterContainer">
         <DashBoardHeader />
+        <div className="dashboardInnerContainer">
+          <h4>Your Dashboard will be coming soon...</h4>
+        </div>
       </div>
     </>
   );

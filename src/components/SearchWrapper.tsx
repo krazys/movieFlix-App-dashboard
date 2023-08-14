@@ -21,7 +21,7 @@ const SearchWrapper = () => {
     // searchCall(inputValue);
   };
 
-  console.log(inputValue, "inputValue");
+  // console.log(inputValue, "inputValue");
 
   return (
     <div className="searchWrapper">

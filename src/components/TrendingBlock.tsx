@@ -71,28 +71,28 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
       groupedItems.push(fetchedData.slice(i, i + elementsPerSlide));
     }
   }
-  console.log(groupedItems);
+  // console.log(groupedItems);
 
   const capitalizeFirstLetter = (str: string) => {
     let x = str.charAt(0).toUpperCase() + str.slice(1);
-    console.log(x);
+    // console.log(x);
     return x;
   };
 
   const movieDetails = async (modalInfoData: any) => {
     try {
-      console.log(modalInfoData.id, modalInfoData.media_type);
+      // console.log(modalInfoData.id, modalInfoData.media_type);
       let response = await axios.get(
         `https://api.themoviedb.org/3/${modalInfoData.media_type}/${modalInfoData.id}?api_key=3e85d84a2d3e58168179cf80ecdecea5&append_to_response=videos`
       );
-      console.log(response);
+      // console.log(response);
       setModalDetailedInfo(response?.data);
 
       let watchProviderList = await axios.get(
         `https://api.themoviedb.org/3/${modalInfoData.media_type}/${modalInfoData.id}/watch/providers?api_key=3e85d84a2d3e58168179cf80ecdecea5`
       );
       setWatchProvidersData(watchProviderList?.data?.results["US"]);
-      console.log(watchProviderList, "watchProviderList");
+      // console.log(watchProviderList, "watchProviderList");
       // setTimeout(()=>{
       //     setModalDetailedInfo(response?.data);
       // }, 2000)
@@ -103,7 +103,7 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
 
   const openmoreInfoModal = (index: number, indexInner: number) => {
     setModalOpen(!modalopen);
-    console.log("NUM", index, indexInner);
+    // console.log("NUM", index, indexInner);
     setModalInfoData(groupedItems[index][indexInner]);
   };
 
@@ -118,9 +118,9 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
 
   const closemoreInfoModal = () => {
     setModalOpen(!modalopen);
-    console.log("Callback function executed!");
+    // console.log("Callback function executed!");
   };
-  console.log("D", modalInfoData);
+  // console.log("D", modalInfoData);
 
   return (
     <div className="movieBlockOuter">

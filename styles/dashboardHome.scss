@@ -1,4 +1,17 @@
 @import "./variables.scss";
 .dashboardOuterContainer {
   background-color: aliceblue;
+
+  .dashboardInnerContainer {
+    background-color: azure;
+    min-height: 30em;
+    display: flex;
+    @include flex-center;
+    h4 {
+      text-align: center;
+      font-family: $primary-font;
+      font-size: 22px;
+      color: #21243d;
+    }
+  }
 }

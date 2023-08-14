@@ -67,14 +67,14 @@ const SearchResultsWrapper = () => {
         `https://api.themoviedb.org/3/search/multi?api_key=3e85d84a2d3e58168179cf80ecdecea5&query=${inputValue}&include_adult=false&language=en-US&page=1`
       );
 
-      console.log("search", response?.data?.results);
+      // console.log("search", response?.data?.results);
       setSearchResponse(response?.data.results);
     } catch (error) {
       console.log(error);
     }
   };
 
-  console.log(params, "inputValue2");
+  // console.log(params, "inputValue2");
 
   useEffect(() => {
     if (params.data) {
@@ -85,7 +85,7 @@ const SearchResultsWrapper = () => {
   const movieDetails = async (modalInfoData: any) => {
     try {
       if (modalInfoData.media_type !== "person") {
-        console.log(modalInfoData.id, modalInfoData.media_type);
+        // console.log(modalInfoData.id, modalInfoData.media_type);
         let media_type =
           modalInfoData.media_type !== undefined
             ? modalInfoData.media_type
@@ -93,22 +93,22 @@ const SearchResultsWrapper = () => {
         let response = await axios.get(
           `https://api.themoviedb.org/3/${media_type}/${modalInfoData.id}?api_key=3e85d84a2d3e58168179cf80ecdecea5&append_to_response=videos`
         );
-        console.log("deatiled", response);
+        // console.log("deatiled", response);
         setModalDetailedInfo(response?.data);
         let watchProviderList = await axios.get(
           `https://api.themoviedb.org/3/${media_type}/${modalInfoData.id}/watch/providers?api_key=3e85d84a2d3e58168179cf80ecdecea5`
         );
         setWatchProvidersData(watchProviderList?.data?.results["US"]);
-        console.log(watchProviderList, modalInfoData.id, "watchProviderList");
+        // console.log(watchProviderList, modalInfoData.id, "watchProviderList");
       } else if (modalInfoData.media_type === "person") {
         let response = await axios.get(
           `https://api.themoviedb.org/3/search/person?api_key=3e85d84a2d3e58168179cf80ecdecea5&append_to_response=videos`
         );
-        console.log("deatiled", response);
+        // console.log("deatiled", response);
         setModalDetailedInfo(response?.data);
       }
     } catch (error) {
-      console.log("deatiled", modalInfoData);
+      // console.log("deatiled", modalInfoData);
       console.log(error);
     }
   };
@@ -122,7 +122,7 @@ const SearchResultsWrapper = () => {
   };
   const closemoreInfoModal = () => {
     setModalOpen(!modalopen);
-    console.log("Callback function executed!");
+    // console.log("Callback function executed!");
   };
 
   return (

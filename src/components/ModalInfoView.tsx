@@ -86,7 +86,6 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
   //         autoplay: 1,
   //     },
   // };
-  console.log(windowWidth, windowHeight);
 
   window.addEventListener("resize", function () {
     if (this.window.innerWidth < 720) {
@@ -127,9 +126,9 @@ const ModalInfoView: React.FC<ModalInfoViewProps> = ({
     videoFetch();
   }, [modalDetailedInfo]);
 
-  let videoUrl = `https://www.youtube.com/watch?v=${videoSource}`;
-  console.log(videoUrl, "videoUrl");
-  console.log(videoSource, "videoSource");
+  // let videoUrl = `https://www.youtube.com/watch?v=${videoSource}`;
+  // // console.log(videoUrl, "videoUrl");
+  // console.log(videoSource, "videoSource");
 
   return (
     <div className="modalOuterWrapper" onClick={closemoreInfoModal}>

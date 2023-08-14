@@ -17,7 +17,7 @@ const ResetPage = () => {
     try {
       await sendPasswordResetEmail(auth, email)
         .then((response) => {
-          console.log(response);
+          // console.log(response);
           navigate("/login");
         })
         .catch((err) => {

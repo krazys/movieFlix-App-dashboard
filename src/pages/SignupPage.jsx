@@ -19,8 +19,8 @@ const SignupPage = () => {
     e.preventDefault();
 
     try {
-      console.log(email, password);
-      console.log(auth);
+      // console.log(email, password);
+      // console.log(auth);
       await createUserWithEmailAndPassword(auth, email, password)
         .then((response) => {
           console.log(response);

@@ -40,7 +40,7 @@ const TrendingPage: React.FC<TrendingProps> = () => {
     let numberArr: any = [];
     for (let i = a; i < b; i++) {
       numberArr.push(i);
-      console.log(a, b, i, "genearted2");
+      // console.log(a, b, i, "genearted2");
     }
 
     setNewArr(numberArr);
@@ -50,7 +50,7 @@ const TrendingPage: React.FC<TrendingProps> = () => {
     let num = Number(ele.target.textContent);
     setPage(num);
   };
-  console.log(page, "page");
+  // console.log(page, "page");
 
   const initialNumGenerator = () => {
     setlastNum(lastNum + 10);
@@ -68,15 +68,15 @@ const TrendingPage: React.FC<TrendingProps> = () => {
     setPage(lastNum - 11);
   };
 
-  console.log(startNum, "startNum");
-  console.log(lastNum, "lastNum");
+  // console.log(startNum, "startNum");
+  // console.log(lastNum, "lastNum");
 
   const TrendingListFetch = async () => {
     try {
       let response = await axios.get(
         `https://api.themoviedb.org/3/trending/all/day?api_key=3e85d84a2d3e58168179cf80ecdecea5&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=${page}`
       );
-      console.log(response);
+      // console.log(response);
 
       setMovieList(response?.data.results);
     } catch (error) {

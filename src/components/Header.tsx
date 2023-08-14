@@ -55,7 +55,7 @@ const Header = () => {
               <ul className="buttonWrapper">
                 <li>
                   <Link to="/signup">
-                    <button className="signIn">Sign In</button>
+                    <button className="signIn">Sign Up</button>
                   </Link>
                 </li>
                 <Link to="/login">

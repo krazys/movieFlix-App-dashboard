@@ -33,7 +33,7 @@ const TrendingMovies = () => {
         "https://api.themoviedb.org/3/trending/movie/day?api_key=3e85d84a2d3e58168179cf80ecdecea5"
       );
       setFetchedData(response?.data?.results);
-      console.log(response);
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }
