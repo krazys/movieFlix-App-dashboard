@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../../styles/Header.scss";
 import { FcSearch } from "react-icons/fc";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { signOut } from "firebase/auth";
 import { auth } from "../../config/firebase";
 import MovieFlixLogo from "../MovieFlixLogo.png";

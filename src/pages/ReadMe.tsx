@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "../../styles/dashboard/ReadMe.scss";
 
 const ReadMe = () => {
