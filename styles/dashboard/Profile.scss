@@ -1,0 +1,30 @@
+@import "../variables.scss";
+
+.profileContainer {
+  background-color: azure;
+  .profileHeadSection {
+    text-align: center;
+    color: $font-color-dark;
+    h3 {
+      font-size: 24px;
+      font-family: $primary-font;
+      color: $font-color-dark;
+    }
+    p {
+      font-family: $secondary-font;
+    }
+  }
+  .profileContent {
+    display: flex;
+    .basicInfoSection {
+      display: flex;
+      gap: 12px;
+
+      .rightSection {
+        display: flex;
+        gap: 12px;
+        flex-direction: column;
+      }
+    }
+  }
+}

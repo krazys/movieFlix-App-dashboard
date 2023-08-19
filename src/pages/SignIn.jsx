@@ -23,8 +23,9 @@ const SignIn = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
-          const user = userCredential.user;
-          navigate("/profile");
+          const userId = userCredential.user;
+          sessionStorage.setItem("userAuth", userId.uid);
+          navigate("/dashboard");
         })
         .catch((err) => {
           const errorCode = err.code;

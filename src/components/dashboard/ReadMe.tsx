@@ -1,4 +1,4 @@
-import "../../styles/dashboard/ReadMe.scss";
+import "../../../styles/dashboard/ReadMe.scss";
 
 const ReadMe = () => {
   return (

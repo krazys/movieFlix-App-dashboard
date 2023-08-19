@@ -22,6 +22,7 @@ const DashBoardHeader = () => {
   const handleLogout = () => {
     signOut(auth)
       .then(() => {
+        sessionStorage.removeItem("userAuth");
         console.log("Sign-out successful.");
         navigate("/login");
       })

@@ -23,8 +23,10 @@ const SignupPage = () => {
       // console.log(auth);
       await createUserWithEmailAndPassword(auth, email, password)
         .then((response) => {
-          console.log(response);
-          navigate("/profile");
+          const userId = response.user;
+          sessionStorage.setItem("userAuth", userId.uid);
+
+          navigate("/dashboard");
         })
         .catch((err) => {
           setErrorMsg(err.message);
