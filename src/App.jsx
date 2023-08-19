@@ -24,6 +24,7 @@ import PrivateRoutes from "./components/dashboard/PrivateRoutes.tsx";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./config/firebase.js";
 import ProfilePage from "./components/dashboard/Profile.tsx";
+import NotFound from "./pages/NotFound.jsx";
 
 const App = () => {
   // const navigate = useNavigate();
@@ -57,7 +58,7 @@ const App = () => {
           }
         >
           <Routes>
-            <Route exact path="*" element={<HomePageWrappper />} />
+            <Route exact path="/" element={<HomePageWrappper />} />
             <Route path="/movie" element={<MoviePage movie="movie" />} />
             <Route path="/shows" element={<ShowPage tv="tv" />} />
             <Route
@@ -81,6 +82,7 @@ const App = () => {
             {/* <Route path="/profile" element={<DashboardHome />} /> */}
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/LoginHelp" element={<ResetPage />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
       </AppLayoutContextWrapper>

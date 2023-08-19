@@ -7,6 +7,7 @@ import { useNavigate, Outlet } from "react-router-dom";
 import ReadMe from "./ReadMe.tsx";
 import heartBeat from "../../assets/heartBeat.gif";
 import DashboardAppContextWrapper from "./DashboardAppContextWrapper.tsx";
+// import IconLabelTabs from "./TabHeader.tsx";
 
 const DashboardHome = () => {
   const navigate = useNavigate();
@@ -35,6 +36,7 @@ const DashboardHome = () => {
         <DashBoardHeader />
         <DashboardAppContextWrapper>
           <Outlet />
+          {/* <IconLabelTabs /> */}
           <div className="dashboardInnerContainer">
             <div className="contentSection">
               <h4>Your Dashboard will be coming soon...</h4>

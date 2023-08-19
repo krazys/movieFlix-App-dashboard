@@ -49,3 +49,20 @@ $font-color-dark: #21243d;
     padding: 0.25rem 1rem;
   }
 }
+
+.notfoundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 484px) {
+    img {
+      width: 300px;
+    }
+  }
+  @media (min-width: 485px) and (max-width: 1024px) {
+    img {
+      width: 600px;
+    }
+  }
+}

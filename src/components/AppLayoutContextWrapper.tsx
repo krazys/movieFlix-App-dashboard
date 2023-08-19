@@ -4,6 +4,7 @@ import { ErrorBoundary } from "react-error-boundary";
 // import NotFound from './NotFound';
 import { useNavigate } from "react-router-dom";
 import "../../styles/variables.scss";
+import { Analytics } from "@vercel/analytics/react";
 
 interface Props {
   children: any;
@@ -35,7 +36,10 @@ const AppLayoutContextWrapper: React.FC<Props> = ({ children }) => {
   return (
     <div>
       <ErrorBoundary FallbackComponent={MyFallbackComponent}>
-        <AppLayout>{children}</AppLayout>
+        <AppLayout>
+          {children}
+          <Analytics />
+        </AppLayout>
       </ErrorBoundary>
     </div>
   );
