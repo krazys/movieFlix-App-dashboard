@@ -36,7 +36,8 @@ const ReadMe = () => {
           </li>
           <li>
             <span>React Routing:</span> The application leverages React Routing
-            for smooth navigation between different sections and pages.
+            for smooth navigation between different sections and pages with
+            Private & Nested Routes.
           </li>
           <li>
             <span>State Management with Hooks:</span> For efficient state
