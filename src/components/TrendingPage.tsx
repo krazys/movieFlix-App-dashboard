@@ -96,7 +96,7 @@ const TrendingPage: React.FC<TrendingProps> = () => {
       <div className="MovieWrapper">
         <div className="filterSection">
           {/* <h2>{filterNameSelected} Movie</h2> */}
-          <h2>Popular Movie</h2>
+          <h2>Popular Movies & Shows</h2>
         </div>
         <div className="listSection">
           <ContentList movieList={movieList} />

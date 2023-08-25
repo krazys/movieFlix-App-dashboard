@@ -97,7 +97,7 @@ const ShowPage: React.FC<ShowProps> = ({ tv }) => {
       <div className="MovieWrapper">
         <div className="filterSection">
           {/* <h2>{filterNameSelected} Movie</h2> */}
-          <h2>Popular Movies & Shows</h2>
+          <h2>Popular Shows</h2>
         </div>
         <div className="listSection">
           <ContentList movieList={movieList} tv={tv} />
