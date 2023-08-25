@@ -45,7 +45,7 @@ const TrendingSection = () => {
         <h4> Trending Today</h4>
         <Link to="/trending">
           <button>
-            Explore Today <AiOutlineDoubleRight />
+            Explore Trending <AiOutlineDoubleRight />
           </button>
         </Link>
       </div>

@@ -140,8 +140,8 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
                       >
                         <div className="topSection">
                           <img
-                            width={284}
-                            height={200}
+                            // width={284}
+                            // height={200}
                             src={`${img_300}${ele.poster_path}`}
                             alt={ele.title}
                           />
@@ -149,7 +149,7 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
                         <div className="rating">
                           {Math.round(ele.vote_average * 10) / 10}{" "}
                         </div>
-                        <div className="bottomSection">
+                        {/* <div className="bottomSection">
                           <h3>
                             {ele.media_type === "tv"
                               ? capitalizeFirstLetter(ele.name)
@@ -164,7 +164,7 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
                                 : ele.release_date}{" "}
                             </p>
                           </div>
-                        </div>
+                        </div> */}
                       </div>
                     );
                   })}
