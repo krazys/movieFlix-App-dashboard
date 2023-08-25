@@ -5,6 +5,7 @@ import Carousel, { CarouselItem } from "./carousel.jsx";
 import ModalInfoView from "./ModalInfoView";
 // import { movieDetails } from "./ApiCallService";
 import axios from "axios";
+import noImageFound from "../assets/noImageFound.png";
 
 interface fetchedDataResponse {
   title: string;
@@ -142,7 +143,11 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
                           <img
                             // width={284}
                             // height={200}
-                            src={`${img_300}${ele.poster_path}`}
+                            src={`${img_300}${
+                              ele.poster_path !== ""
+                                ? ele.poster_path
+                                : { noImageFound }
+                            }`}
                             alt={ele.title}
                           />
                         </div>

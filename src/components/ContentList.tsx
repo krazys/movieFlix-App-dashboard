@@ -3,6 +3,7 @@ import { img_300 } from "../config/config.js";
 import "../../styles/contentList.scss";
 import ModalInfoView from "./ModalInfoView";
 import axios from "axios";
+import noImageFound from "../assets/noImageFound.png";
 
 interface movieRepsonse {
   id: number;
@@ -126,7 +127,11 @@ const ContentList: React.FC<ContentListProps> = ({
                 width={284}
                 height={200}
                 src={`${img_300}${
-                  ele.poster_path !== null ? ele.poster_path : ele.backdrop_path
+                  ele.poster_path !== null
+                    ? ele.poster_path
+                    : ele.backdrop_path !== null
+                    ? ele.backdrop_path
+                    : "No Data"
                 }`}
                 alt={trimmedTitle || trimmedName}
               />

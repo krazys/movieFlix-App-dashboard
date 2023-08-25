@@ -153,9 +153,11 @@ const SearchResultsWrapper = () => {
                           width={65}
                           height={65}
                           src={`${img_300}${
-                            ele.poster_path !== ""
+                            ele.poster_path !== null
                               ? ele.poster_path
-                              : ele.backdrop_path
+                              : ele.backdrop_path !== null
+                              ? ele.backdrop_path
+                              : "No Data"
                           }`}
                           alt="No Data"
                         />

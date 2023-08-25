@@ -19,6 +19,9 @@
       margin-block-start: unset;
       margin-block-end: unset;
       padding-left: 24px;
+      @include respond(mobile) {
+        font-size: 4.9vw;
+      }
     }
     a {
       text-decoration: none;
