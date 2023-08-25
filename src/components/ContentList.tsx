@@ -3,7 +3,7 @@ import { img_300 } from "../config/config.js";
 import "../../styles/contentList.scss";
 import ModalInfoView from "./ModalInfoView";
 import axios from "axios";
-import noImageFound from "../assets/noImageFound.png";
+// import noImageFound from "../assets/noImageFound.png";
 
 interface movieRepsonse {
   id: number;

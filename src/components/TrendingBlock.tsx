@@ -74,11 +74,11 @@ const TrendingBlock: React.FC<TrendingBlockProps> = ({ fetchedData }) => {
   }
   // console.log(groupedItems);
 
-  const capitalizeFirstLetter = (str: string) => {
-    let x = str.charAt(0).toUpperCase() + str.slice(1);
-    // console.log(x);
-    return x;
-  };
+  // const capitalizeFirstLetter = (str: string) => {
+  //   let x = str.charAt(0).toUpperCase() + str.slice(1);
+  //   // console.log(x);
+  //   return x;
+  // };
 
   const movieDetails = async (modalInfoData: any) => {
     try {
